@@ -1,0 +1,147 @@
+@import url(./colors.css);
+@import url(./animation.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--offWhite);
+    color: var(--cinzaEscuro);
+}
+header{
+    background: var(--marromEscuro);
+    color: var(--branco);   
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+nav{
+    display: flex;
+    gap: 25px;
+}
+nav a{ 
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+}
+nav a:hover{
+    color: var(--begeQuente);
+    scale: 1.2;
+}
+.banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+
+     background: linear-gradient(
+        120deg,
+        var(--begeClaro),
+        var(--marromMedio),
+        var(--marromEscuro)
+    );
+    background-size: 400% 400%;
+    animation: gradientBackground 10s linear infinite;
+    
+}
+.texto-banner{
+    width: 45%;
+    position: relative;
+    animation: myAnimation2 2s ease-out forwards;
+}
+.texto-banner h1{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+.texto-banner p{
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 28px;
+}
+.banner img{
+    width: 30%;
+    border-radius: 15px;
+    animation: myAnimation 1s ease-out forwards;
+}
+button{
+    background: var(--marromMedio);
+    height: 40px;
+    width: 260px;
+    color: var(--branco);
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.titulo{
+    text-align: center;
+    margin: 50px 0;
+    font-size: 34px;
+
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.cards {
+  display: grid;
+  /* Cria colunas responsivas com largura mínima de 280px e máxima de 1fr */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem; /* Espaçamento entre os cards */
+  padding: 1rem;
+  max-width: 1200px; /* Evita que o container fique esticado demais em telas ultra-wide */
+  margin: 0 auto; /* Centraliza a grade na página */
+}
+.card{
+    width: 280px;
+    background: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+.card h3{
+    margin: 20px 0 e 10px;
+}
+.card p{
+    padding: 0 20px;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+.card:hover{
+    scale: 1.1;
+}
+.negrito{
+    font-weight: bold;
+}
+.rodape{
+    background: var(--marromEscuro);
+    padding: 30px;
+}
+.rodape p{
+    text-align: center;
+    color: var(--branco);
+}
